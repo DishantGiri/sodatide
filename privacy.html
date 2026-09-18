@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Sodatide™</title>
+  <meta name="description" content="Read the Sodatide™ Privacy Policy to understand how personal information, cookies, analytics, and privacy rights are handled." />
+
+  <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+      background: #faf9f6;
+      color: #2c2c2c;
+      line-height: 1.85;
+      font-size: 1.02rem;
+      overflow-x: hidden;
+    }
+
+    .about-nav {
+      background: #0f0a2a;
+      padding: 0.85rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .about-nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+    .about-nav-logo img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .about-nav-logo span {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+    .about-nav-logo sup {
+      font-size: 0.55em;
+      color: rgba(139, 92, 246, 0.9);
+    }
+    .about-nav-back {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: color 0.2s ease;
+    }
+    .about-nav-back:hover {
+      color: rgba(139, 92, 246, 0.95);
+    }
+
+    .book-page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3.5rem 2.5rem 4rem;
+    }
+    .book-header {
+      text-align: center;
+      padding-bottom: 2.5rem;
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid #e0dcd5;
+    }
+    .book-header-logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    .book-title {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 0.4rem;
+    }
+    .book-subtitle {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 1rem;
+      color: #777;
+      font-style: italic;
+    }
+
+    h2.book-h2 {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-top: 2.8rem;
+      margin-bottom: 0.8rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #e8e4dc;
+    }
+    h2.book-h2:first-of-type {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+    h3.book-h3 {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: #2c2c2c;
+      margin-top: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    .book-p {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+    .book-ul, .book-ol {
+      margin: 0.6rem 0 1.2rem 1.6rem;
+    }
+    .book-ul li, .book-ol li {
+      margin-bottom: 0.35rem;
+    }
+    .book-callout {
+      background: #f3f0ea;
+      border-left: 3px solid #a89f91;
+      padding: 1.1rem 1.3rem;
+      margin: 1.2rem 0 1.5rem;
+      font-size: 0.95rem;
+      border-radius: 2px;
+    }
+    .book-contact-box {
+      background: #ffffff;
+      border: 1px solid #e0dcd5;
+      border-radius: 8px;
+      padding: 1.4rem 1.6rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    }
+    .book-contact-box p {
+      margin-bottom: 0.5rem;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .book-contact-box p:last-child {
+      margin-bottom: 0;
+    }
+    .book-contact-box a {
+      color: #6d28d9;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .book-contact-box a:hover {
+      text-decoration: underline;
+    }
+    .book-divider {
+      border: none;
+      border-top: 1px dashed #d5d0c8;
+      margin: 2.5rem 0;
+    }
+    .about-footer {
+      background: #0f0a2a;
+      color: rgba(255, 255, 255, 0.5);
+      text-align: center;
+      padding: 1.8rem 1rem;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .about-footer a {
+      color: rgba(139, 92, 246, 0.9);
+      text-decoration: none;
+    }
+    .about-footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Privacy Policy",
+    "url": "https://www.sodatideofficial.us/privacy.html",
+    "description": "Privacy policy explaining data processing, cookies, and visitor rights for SodatideOfficial.us."
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="about-nav">
+    <a href="index.html" class="about-nav-logo">
+      <img src="public/logo.png" alt="Sodatide logo" />
+      <span>Sodatide<sup>™</sup></span>
+    </a>
+    <a href="index.html" class="about-nav-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to Home
+    </a>
+  </nav>
+
+  <!-- Content -->
+  <main class="book-page">
+
+    <header class="book-header">
+      <img src="public/logo.png" alt="Sodatide logo" class="book-header-logo" />
+      <h1 class="book-title">Privacy Policy</h1>
+      <p class="book-subtitle">Effective Date: September 18, 2026</p>
+    </header>
+
+    <!-- Introduction -->
+    <h2 class="book-h2">Introduction</h2>
+    <p class="book-p">
+      Sodatide™ (“we,” “us,” or “our”) respects your privacy and is committed to handling personal information responsibly.
+    </p>
+    <p class="book-p">
+      This Privacy Policy explains how information may be collected, used, stored, and disclosed when you visit <a href="https://www.sodatideofficial.us">https://www.sodatideofficial.us</a> (the “Site”), contact us, or interact with links and features available through the Site.
+    </p>
+    <div class="book-callout">
+      <p>This is an independent promotional product-information website. It is not the manufacturer’s corporate website. Purchases may be completed through an independently operated third-party checkout, which maintains its own privacy practices.</p>
+    </div>
+
+    <!-- Information We Collect -->
+    <h2 class="book-h2">Information We Collect</h2>
+
+    <h3 class="book-h3">Information You Provide</h3>
+    <p class="book-p">
+      We may collect information that you voluntarily submit when you contact us, request assistance, send feedback, or make a privacy-related request.
+    </p>
+    <p class="book-p">This information may include:</p>
+    <ul class="book-ul">
+      <li>Your name</li>
+      <li>Email address</li>
+      <li>Phone number</li>
+      <li>Order number</li>
+      <li>Purchase email</li>
+      <li>Delivery or mailing information</li>
+      <li>Information included in your message</li>
+      <li>Any documents you choose to provide</li>
+    </ul>
+    <p class="book-p">
+      Please do not send full payment-card numbers, passwords, medical records, government identification numbers, or other sensitive information through an ordinary email or contact form.
+    </p>
+
+    <h3 class="book-h3">Information Collected Automatically</h3>
+    <p class="book-p">
+      When you access the Site, certain technical and usage information may be collected automatically through cookies, server logs, analytics tools, and similar technologies.
+    </p>
+    <p class="book-p">This information may include:</p>
+    <ul class="book-ul">
+      <li>Internet Protocol address</li>
+      <li>Browser and device type</li>
+      <li>Operating system</li>
+      <li>Approximate geographic location</li>
+      <li>Language and time-zone settings</li>
+      <li>Referring website or search term</li>
+      <li>Pages viewed</li>
+      <li>Links clicked</li>
+      <li>Date and time of access</li>
+      <li>Time spent on the Site</li>
+      <li>Affiliate or campaign identifiers</li>
+      <li>General interaction and performance data</li>
+    </ul>
+    <p class="book-p">
+      This information helps us maintain the Site, understand how visitors use it, measure traffic, and identify technical or security issues.
+    </p>
+
+    <h3 class="book-h3">Order and Payment Information</h3>
+    <p class="book-p">
+      We do not directly manufacture, fulfill, or ship the advertised product. When you follow a purchase link, you may be redirected to a third-party retailer or checkout provider.
+    </p>
+    <p class="book-p">The third party may collect:</p>
+    <ul class="book-ul">
+      <li>Your name</li>
+      <li>Billing and delivery addresses</li>
+      <li>Email address</li>
+      <li>Phone number</li>
+      <li>Payment details</li>
+      <li>Order contents</li>
+      <li>Transaction information</li>
+    </ul>
+    <p class="book-p">
+      Payment-card information entered on an external checkout is processed according to that provider’s privacy policy and security practices. We encourage you to review the checkout provider’s terms and privacy notice before submitting an order.
+    </p>
+
+    <!-- How We Use Information -->
+    <h2 class="book-h2">How We Use Information</h2>
+    <p class="book-p">We may use collected information to:</p>
+    <ul class="book-ul">
+      <li>Operate and maintain the Site</li>
+      <li>Respond to questions, feedback, and support requests</li>
+      <li>Provide product and ordering information</li>
+      <li>Direct order-related inquiries to the appropriate support channel</li>
+      <li>Improve website content, usability, and performance</li>
+      <li>Measure traffic and visitor engagement</li>
+      <li>Monitor affiliate-link activity</li>
+      <li>Detect spam, fraud, misuse, and security threats</li>
+      <li>Maintain business and technical records</li>
+      <li>Meet legal, regulatory, or contractual obligations</li>
+      <li>Protect our rights and the rights of Site visitors</li>
+    </ul>
+    <p class="book-p">
+      We will not use personal information for purposes that are materially different from those described here without providing appropriate notice.
+    </p>
+
+    <!-- Legal Bases for Processing -->
+    <h2 class="book-h2">Legal Bases for Processing</h2>
+    <p class="book-p">
+      Where European data-protection law applies, we may process personal information under one or more of the following legal bases:
+    </p>
+    <ul class="book-ul">
+      <li><strong>Consent:</strong> When you agree to optional cookies, communications, or another specific use.</li>
+      <li><strong>Legitimate interests:</strong> To operate, secure, analyze, and improve the Site.</li>
+      <li><strong>Contractual necessity:</strong> When processing is necessary to respond to a request or provide a service you requested.</li>
+      <li><strong>Legal obligation:</strong> When information must be processed or retained to comply with applicable law.</li>
+      <li><strong>Legal claims:</strong> When necessary to establish, exercise, or defend legal rights.</li>
+    </ul>
+    <p class="book-p">
+      You may withdraw consent at any time. Withdrawal does not affect processing that was lawful before consent was withdrawn.
+    </p>
+
+    <!-- Cookies and Similar Technologies -->
+    <h2 class="book-h2">Cookies and Similar Technologies</h2>
+    <p class="book-p">
+      The Site may use cookies, pixels, local storage, server logs, and similar technologies.
+    </p>
+    <p class="book-p">These technologies may support:</p>
+    <ul class="book-ul">
+      <li>Essential website functions</li>
+      <li>Security and fraud prevention</li>
+      <li>Visitor preferences</li>
+      <li>Website analytics</li>
+      <li>Performance measurement</li>
+      <li>Affiliate-link attribution</li>
+      <li>Advertising measurement</li>
+    </ul>
+    <p class="book-p">
+      Some cookies are necessary for the Site to function. Optional analytics, advertising, or affiliate-tracking cookies may require consent depending on your location.
+    </p>
+    <p class="book-p">
+      You may control cookies through the consent tool displayed on the Site, where available, or through your browser settings. Blocking cookies may affect certain features or prevent affiliate attribution from working correctly.
+    </p>
+
+    <!-- Analytics -->
+    <h2 class="book-h2">Analytics</h2>
+    <p class="book-p">
+      We may use third-party analytics providers to understand general visitor behavior, such as page views, traffic sources, device categories, and engagement.
+    </p>
+    <p class="book-p">
+      Analytics providers may place cookies or process technical identifiers according to their own privacy policies. Where required, optional analytics will be activated only after receiving appropriate consent.
+    </p>
+
+    <!-- Affiliate Links -->
+    <h2 class="book-h2">Affiliate Links</h2>
+    <p class="book-p">
+      Some links on the Site are affiliate links. If you click one of these links or complete a qualifying purchase, we may receive a commission.
+    </p>
+    <p class="book-p">Affiliate networks and retailers may use cookies, click identifiers, device information, and transaction confirmations to:</p>
+    <ul class="book-ul">
+      <li>Attribute referrals</li>
+      <li>Measure campaign performance</li>
+      <li>Detect invalid activity</li>
+      <li>Calculate commissions</li>
+      <li>Confirm qualifying purchases</li>
+    </ul>
+    <p class="book-p">
+      We generally do not receive your complete payment-card information from affiliate partners.
+    </p>
+
+    <!-- How We Share Information -->
+    <h2 class="book-h2">How We Share Information</h2>
+    <p class="book-p">We may disclose limited information to:</p>
+    <ul class="book-ul">
+      <li>Website hosting and infrastructure providers</li>
+      <li>Analytics and performance providers</li>
+      <li>Security and spam-prevention services</li>
+      <li>Email and communication providers</li>
+      <li>Affiliate networks and retail partners</li>
+      <li>Professional advisers</li>
+      <li>Government agencies or legal authorities when required</li>
+      <li>A successor organization following a merger, sale, or transfer of Site assets</li>
+    </ul>
+    <p class="book-p">
+      Service providers are permitted to process information only for the functions they perform for us, subject to applicable contractual and legal requirements.
+    </p>
+
+    <!-- Sale or Sharing of Personal Information -->
+    <h2 class="book-h2">Sale or Sharing of Personal Information</h2>
+    <p class="book-p">
+      We do not knowingly sell personal information for direct monetary payment.
+    </p>
+    <p class="book-p">
+      However, certain analytics, advertising, or affiliate technologies may be treated as the “sale,” “sharing,” or use of personal information for targeted advertising under some privacy laws.
+    </p>
+    <p class="book-p">
+      Where applicable, you may request to opt out through the Site’s cookie controls or by contacting us with “Privacy Request” in the subject line.
+    </p>
+
+    <!-- International Data Transfers -->
+    <h2 class="book-h2">International Data Transfers</h2>
+    <p class="book-p">
+      The Site may use service providers located in countries other than the country where you live. As a result, information may be processed in jurisdictions with different data-protection laws.
+    </p>
+    <p class="book-p">
+      Where required, we use legally recognized safeguards for international transfers, such as contractual protections or other approved transfer mechanisms.
+    </p>
+
+    <!-- Data Retention -->
+    <h2 class="book-h2">Data Retention</h2>
+    <p class="book-p">We retain personal information only for as long as reasonably necessary to:</p>
+    <ul class="book-ul">
+      <li>Respond to your request</li>
+      <li>Maintain relevant business records</li>
+      <li>Measure and secure the Site</li>
+      <li>Resolve disputes</li>
+      <li>Enforce agreements</li>
+      <li>Meet legal obligations</li>
+    </ul>
+    <p class="book-p">
+      Retention periods may vary based on the type of information, the purpose for which it was collected, and applicable legal requirements.
+    </p>
+    <p class="book-p">
+      When information is no longer required, we may delete, anonymize, or securely restrict access to it.
+    </p>
+
+    <!-- Security -->
+    <h2 class="book-h2">Security</h2>
+    <p class="book-p">
+      We use reasonable administrative, organizational, and technical measures designed to protect personal information against loss, misuse, unauthorized access, alteration, or disclosure.
+    </p>
+    <p class="book-p">
+      However, no website, email system, storage service, or internet transmission can be guaranteed to be completely secure. Visitors should use caution when submitting information online.
+    </p>
+
+    <!-- Your Privacy Rights -->
+    <h2 class="book-h2">Your Privacy Rights</h2>
+    <p class="book-p">Depending on your location, you may have the right to:</p>
+    <ul class="book-ul">
+      <li>Request access to personal information</li>
+      <li>Correct inaccurate or incomplete information</li>
+      <li>Request deletion of information</li>
+      <li>Restrict certain processing</li>
+      <li>Object to certain uses</li>
+      <li>Withdraw consent</li>
+      <li>Request data portability</li>
+      <li>Opt out of targeted advertising or qualifying data sharing</li>
+      <li>Appeal a denied privacy request</li>
+      <li>Submit a complaint to a data-protection authority</li>
+    </ul>
+    <p class="book-p">
+      The European Commission describes GDPR rights including access, correction, deletion, restriction, portability, objection, and protections concerning automated decision-making. California residents may also have rights under applicable state privacy law.
+    </p>
+    <p class="book-p">
+      To exercise a privacy right, email <a href="mailto:contact@customercs.com">contact@customercs.com</a> with “Privacy Request” in the subject line.
+    </p>
+    <p class="book-p">
+      We may request reasonable information to verify your identity. Authorized agents may also be required to provide proof that they are permitted to act for you.
+    </p>
+
+    <!-- Children’s Privacy -->
+    <h2 class="book-h2">Children’s Privacy</h2>
+    <p class="book-p">
+      This Site and the advertised supplement are intended for adults. We do not knowingly collect personal information from children under 18.
+    </p>
+    <p class="book-p">
+      If you believe that a child has submitted personal information through the Site, contact us so we can review and, where appropriate, delete the information.
+    </p>
+
+    <!-- Third-Party Websites -->
+    <h2 class="book-h2">Third-Party Websites</h2>
+    <p class="book-p">
+      The Site may contain links to retailers, payment processors, affiliate partners, social platforms, or other third-party websites.
+    </p>
+    <p class="book-p">
+      We do not control the privacy, security, content, or data-handling practices of these external services. Visiting or submitting information to a third-party website is subject to that party’s policies.
+    </p>
+    <p class="book-p">
+      A link from this Site does not mean that we control or accept responsibility for the third party’s privacy practices.
+    </p>
+
+    <!-- Email Communications -->
+    <h2 class="book-h2">Email Communications</h2>
+    <p class="book-p">
+      If you contact us, we may reply using the email address you provide. We may retain the correspondence for support, recordkeeping, security, or legal purposes.
+    </p>
+    <p class="book-p">
+      If marketing emails are offered in the future, recipients will be provided with an appropriate method to unsubscribe. Transactional or support-related communications may still be sent when necessary.
+    </p>
+
+    <!-- Do Not Track Signals -->
+    <h2 class="book-h2">Do Not Track Signals</h2>
+    <p class="book-p">
+      Some browsers provide a “Do Not Track” setting. Because there is no universally accepted technical standard for responding to these signals, the Site may not respond to every Do Not Track request.
+    </p>
+    <p class="book-p">
+      Where required by applicable law, we will process recognized opt-out preference signals in accordance with relevant legal requirements.
+    </p>
+
+    <!-- Changes to This Privacy Policy -->
+    <h2 class="book-h2">Changes to This Privacy Policy</h2>
+    <p class="book-p">
+      We may update this Privacy Policy to reflect changes in the Site, technologies, service providers, legal requirements, or data practices.
+    </p>
+    <p class="book-p">
+      The updated version will be posted on this page with a revised effective date. Material changes may also be communicated through an additional Site notice where appropriate.
+    </p>
+
+    <hr class="book-divider" />
+
+    <!-- Contact Us -->
+    <h2 class="book-h2">Contact Us</h2>
+    <div class="book-contact-box">
+      <p><strong>Sodatide™</strong></p>
+      <p><strong>Website:</strong> <a href="https://www.sodatideofficial.us">https://www.sodatideofficial.us</a></p>
+      <p><strong>Email:</strong> <a href="mailto:contact@customercs.com">contact@customercs.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+15074488190">+1 (507) 448-8190</a></p>
+      <p><strong>Address:</strong> Gedimino pr. 20, LT-01103 Vilnius, Lithuania</p>
+    </div>
+    <p class="book-p">
+      When submitting a privacy request, include enough information for us to understand and respond to it. Do not include complete card details, account passwords, or unnecessary sensitive information.
+    </p>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="about-footer">
+    <p>&copy; 2025 Sodatide™ &mdash; All Rights Reserved. &nbsp;|&nbsp; <a href="index.html">Return to Home</a> &nbsp;|&nbsp; <a href="contact.html">Contact Us</a> &nbsp;|&nbsp; <a href="disclaimer.html">Disclaimer</a></p>
+  </footer>
+
+</body>
+</html>
