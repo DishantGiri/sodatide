@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Sodatide™ Customer Service</title>
+  <meta name="description" content="Contact Sodatide™ customer service for order assistance, shipping status, product questions, return instructions, or refund requests." />
+
+  <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+      background: #faf9f6;
+      color: #2c2c2c;
+      line-height: 1.85;
+      font-size: 1.02rem;
+      overflow-x: hidden;
+    }
+
+    .about-nav {
+      background: #0f0a2a;
+      padding: 0.85rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .about-nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+    .about-nav-logo img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .about-nav-logo span {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+    .about-nav-logo sup {
+      font-size: 0.55em;
+      color: rgba(139, 92, 246, 0.9);
+    }
+    .about-nav-back {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: color 0.2s ease;
+    }
+    .about-nav-back:hover {
+      color: rgba(139, 92, 246, 0.95);
+    }
+
+    .book-page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3.5rem 2.5rem 4rem;
+    }
+    .book-header {
+      text-align: center;
+      padding-bottom: 2.5rem;
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid #e0dcd5;
+    }
+    .book-header-logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    .book-title {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 0.4rem;
+    }
+    .book-subtitle {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 1rem;
+      color: #777;
+      font-style: italic;
+    }
+
+    h2.book-h2 {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-top: 2.8rem;
+      margin-bottom: 0.8rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #e8e4dc;
+    }
+    h2.book-h2:first-of-type {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+    h3.book-h3 {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: #2c2c2c;
+      margin-top: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    .book-p {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+    .book-ul, .book-ol {
+      margin: 0.6rem 0 1.2rem 1.6rem;
+    }
+    .book-ul li, .book-ol li {
+      margin-bottom: 0.35rem;
+    }
+    .book-callout {
+      background: #f3f0ea;
+      border-left: 3px solid #a89f91;
+      padding: 1.1rem 1.3rem;
+      margin: 1.2rem 0 1.5rem;
+      font-size: 0.95rem;
+      border-radius: 2px;
+    }
+    .book-contact-box {
+      background: #ffffff;
+      border: 1px solid #e0dcd5;
+      border-radius: 8px;
+      padding: 1.4rem 1.6rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    }
+    .book-contact-box p {
+      margin-bottom: 0.5rem;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .book-contact-box p:last-child {
+      margin-bottom: 0;
+    }
+    .book-contact-box a {
+      color: #6d28d9;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .book-contact-box a:hover {
+      text-decoration: underline;
+    }
+    .book-divider {
+      border: none;
+      border-top: 1px dashed #d5d0c8;
+      margin: 2.5rem 0;
+    }
+    .about-footer {
+      background: #0f0a2a;
+      color: rgba(255, 255, 255, 0.5);
+      text-align: center;
+      padding: 1.8rem 1rem;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .about-footer a {
+      color: rgba(139, 92, 246, 0.9);
+      text-decoration: none;
+    }
+    .about-footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Sodatide Customer Service",
+    "url": "https://www.sodatideofficial.us/contact.html",
+    "description": "Contact channels and customer support details for Sodatide synbiotic supplement inquiries.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Sodatide™",
+      "url": "https://www.sodatideofficial.us",
+      "email": "contact@customercs.com",
+      "telephone": "+1-507-448-8190",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gedimino pr. 20",
+        "addressLocality": "Vilnius",
+        "postalCode": "LT-01103",
+        "addressCountry": "Lithuania"
+      }
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="about-nav">
+    <a href="index.html" class="about-nav-logo">
+      <img src="public/logo.png" alt="Sodatide logo" />
+      <span>Sodatide<sup>™</sup></span>
+    </a>
+    <a href="index.html" class="about-nav-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to Home
+    </a>
+  </nav>
+
+  <!-- Content -->
+  <main class="book-page">
+
+    <header class="book-header">
+      <img src="public/logo.png" alt="Sodatide logo" class="book-header-logo" />
+      <h1 class="book-title">Contact Us</h1>
+      <p class="book-subtitle">Customer Support, Order Assistance &amp; Inquiries</p>
+    </header>
+
+    <p class="book-p">
+      If you have a question about this website, the available product information, an existing order, delivery, or a refund request, please use the contact details below.
+    </p>
+
+    <div class="book-callout">
+      <p>Please note that SodatideOfficial.us is an independent promotional information website and not the manufacturer’s corporate website. We provide product-focused information and may direct visitors to a third-party checkout. We do not manufacture, package, ship, or directly process orders.</p>
+    </div>
+
+    <!-- General Inquiries -->
+    <h2 class="book-h2">General Inquiries</h2>
+    <p class="book-p">
+      For questions, feedback, corrections, or concerns related to information published on this website, contact:
+    </p>
+    <div class="book-contact-box">
+      <p><strong>Email:</strong> <a href="mailto:contact@customercs.com">contact@customercs.com</a></p>
+    </div>
+    <p class="book-p">
+      When writing to us, include the page URL and a clear explanation of your question. Please do not email passwords, full payment-card numbers, or sensitive medical information.
+    </p>
+
+    <!-- Order and Customer Support -->
+    <h2 class="book-h2">Order and Customer Support</h2>
+    <p class="book-p">
+      For help with an existing order, contact customer support using the details below:
+    </p>
+    <div class="book-contact-box">
+      <p><strong>Email:</strong> <a href="mailto:contact@customercs.com">contact@customercs.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+15074488190">+1 (507) 448-8190</a></p>
+    </div>
+    <p class="book-p">Customer support may be able to assist with:</p>
+    <ul class="book-ul">
+      <li>Order confirmation</li>
+      <li>Delivery-status questions</li>
+      <li>Incorrect or damaged orders</li>
+      <li>Product information</li>
+      <li>Return instructions</li>
+      <li>Refund requests</li>
+      <li>Billing concerns</li>
+    </ul>
+    <p class="book-p">To help the support team locate your purchase, include your:</p>
+    <ul class="book-ul">
+      <li>Full name</li>
+      <li>Order number</li>
+      <li>Email used during checkout</li>
+      <li>Purchase date</li>
+      <li>Brief description of the issue</li>
+    </ul>
+
+    <!-- Refund and Return Assistance -->
+    <h2 class="book-h2">Refund and Return Assistance</h2>
+    <p class="book-p">
+      If you wish to request a refund, write “Refund Request” in the subject line of your email and provide the relevant order details.
+    </p>
+    <p class="book-p">
+      Do not send bottles or packages to any address until customer support confirms the current return instructions. The contact address listed on this page may not be the authorized returns facility.
+    </p>
+    <p class="book-p">Keep copies of your:</p>
+    <ul class="book-ul">
+      <li>Order-confirmation email</li>
+      <li>Packing slip</li>
+      <li>Messages with customer support</li>
+      <li>Return authorization details</li>
+      <li>Shipping receipt and tracking number</li>
+    </ul>
+    <p class="book-p">
+      Return eligibility, shipping responsibility, processing periods, and other conditions remain subject to the return policy that applied when your order was placed.
+    </p>
+
+    <hr class="book-divider" />
+
+    <!-- Contact Address -->
+    <h2 class="book-h2">Contact Address</h2>
+    <div class="book-contact-box">
+      <p><strong>Sodatide™</strong></p>
+      <p>Gedimino pr. 20</p>
+      <p>LT-01103 Vilnius</p>
+      <p>Lithuania</p>
+    </div>
+    <p class="book-p">
+      This address is provided for general contact purposes. Do not mail product returns to this address unless customer support specifically instructs you to do so.
+    </p>
+
+    <!-- Website Information -->
+    <h2 class="book-h2">Website Information</h2>
+    <div class="book-contact-box">
+      <p><strong>Website:</strong> <a href="https://www.sodatideofficial.us">https://www.sodatideofficial.us</a></p>
+      <p><strong>Brand:</strong> Sodatide™</p>
+      <p><strong>Email:</strong> <a href="mailto:contact@customercs.com">contact@customercs.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+15074488190">+1 (507) 448-8190</a></p>
+    </div>
+
+    <!-- Medical and Safety Questions -->
+    <h2 class="book-h2">Medical and Safety Questions</h2>
+    <p class="book-p">
+      Information published on this website is for general informational and promotional purposes only. It is not medical advice.
+    </p>
+    <p class="book-p">
+      Speak with a qualified healthcare professional before taking a dietary supplement if you are pregnant, nursing, under 18, taking prescription medication, managing a medical condition, following a restricted diet, or concerned about a possible ingredient allergy.
+    </p>
+    <p class="book-p">
+      If you believe you are experiencing a medical emergency, contact your local emergency services immediately.
+    </p>
+
+    <!-- Privacy Questions -->
+    <h2 class="book-h2">Privacy Questions</h2>
+    <p class="book-p">
+      If your inquiry concerns personal information submitted through this website, please include “Privacy Request” in the email subject line.
+    </p>
+    <p class="book-p">You may contact us to ask about:</p>
+    <ul class="book-ul">
+      <li>Information you submitted</li>
+      <li>A correction request</li>
+      <li>A deletion request</li>
+      <li>Website privacy practices</li>
+      <li>Marketing communications</li>
+    </ul>
+    <p class="book-p">
+      We may need to verify your identity before processing a request involving personal information.
+    </p>
+
+    <!-- Response Expectations -->
+    <h2 class="book-h2">Response Expectations</h2>
+    <p class="book-p">
+      Please provide accurate contact and order details so your inquiry can be handled efficiently. Response times may vary depending on the nature of the request, weekends, holidays, and order volume.
+    </p>
+    <p class="book-p">
+      We appreciate your interest and will make every reasonable effort to direct your question to the appropriate support channel.
+    </p>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="about-footer">
+    <p>&copy; 2025 Sodatide™ &mdash; All Rights Reserved. &nbsp;|&nbsp; <a href="index.html">Return to Home</a> &nbsp;|&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="disclaimer.html">Disclaimer</a></p>
+  </footer>
+
+</body>
+</html>

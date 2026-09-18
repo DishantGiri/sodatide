@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Sodatide™</title>
+  <meta name="description" content="Learn about Sodatide™, our mission, editorial approach, affiliate disclosure, and medical disclaimer." />
+
+  <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+      background: #faf9f6;
+      color: #2c2c2c;
+      line-height: 1.85;
+      font-size: 1.02rem;
+      overflow-x: hidden;
+    }
+
+    /* ── Top Navigation Bar ── */
+    .about-nav {
+      background: #0f0a2a;
+      padding: 0.85rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .about-nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+
+    .about-nav-logo img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .about-nav-logo span {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.01em;
+    }
+
+    .about-nav-logo sup {
+      font-size: 0.55em;
+      color: rgba(139, 92, 246, 0.9);
+    }
+
+    .about-nav-back {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: color 0.2s ease;
+    }
+
+    .about-nav-back:hover {
+      color: rgba(139, 92, 246, 0.95);
+    }
+
+    /* ── Page Container ── */
+    .book-page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3.5rem 2.5rem 4rem;
+    }
+
+    /* ── Title Block ── */
+    .book-header {
+      text-align: center;
+      padding-bottom: 2.5rem;
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid #e0dcd5;
+    }
+
+    .book-header-logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    .book-title {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.01em;
+    }
+
+    .book-subtitle {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 1rem;
+      color: #777;
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    /* ── Section Headings ── */
+    h2.book-h2 {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-top: 2.8rem;
+      margin-bottom: 0.8rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #e8e4dc;
+    }
+
+    h2.book-h2:first-of-type {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+    h3.book-h3 {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: #2c2c2c;
+      margin-top: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ── Body Text ── */
+    .book-p {
+      margin-bottom: 1rem;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    /* ── Lists ── */
+    .book-ul {
+      margin: 0.6rem 0 1.2rem 1.6rem;
+      list-style: disc;
+    }
+
+    .book-ul li {
+      margin-bottom: 0.3rem;
+      padding-left: 0.2rem;
+    }
+
+    .book-ol {
+      margin: 0.6rem 0 1.2rem 1.6rem;
+      list-style: decimal;
+    }
+
+    .book-ol li {
+      margin-bottom: 0.3rem;
+      padding-left: 0.2rem;
+    }
+
+    /* ── Highlight / Call-out boxes ── */
+    .book-callout {
+      background: #f3f0ea;
+      border-left: 3px solid #a89f91;
+      padding: 1.1rem 1.3rem;
+      margin: 1.2rem 0 1.5rem;
+      font-size: 0.95rem;
+      border-radius: 2px;
+    }
+
+    .book-callout p {
+      margin-bottom: 0.5rem;
+    }
+
+    .book-callout p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── Contact Info Box ── */
+    .book-contact-box {
+      background: #f7f5f1;
+      border: 1px solid #e0dcd5;
+      border-radius: 4px;
+      padding: 1.3rem 1.5rem;
+      margin: 1.2rem 0;
+    }
+
+    .book-contact-box p {
+      margin-bottom: 0.35rem;
+      font-size: 0.95rem;
+    }
+
+    .book-contact-box a {
+      color: #5b3ea8;
+      text-decoration: none;
+    }
+
+    .book-contact-box a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Links ── */
+    .book-link {
+      color: #5b3ea8;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(91, 62, 168, 0.3);
+      transition: border-color 0.2s ease;
+    }
+
+    .book-link:hover {
+      border-bottom-color: #5b3ea8;
+    }
+
+    /* ── Divider ── */
+    .book-divider {
+      border: none;
+      border-top: 1px solid #e0dcd5;
+      margin: 2.5rem 0;
+    }
+
+    /* ── Footer on About page ── */
+    .about-footer {
+      background: #0f0a2a;
+      padding: 1.6rem 2rem;
+      text-align: center;
+    }
+
+    .about-footer p {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    .about-footer a {
+      color: rgba(139, 92, 246, 0.7);
+      text-decoration: none;
+    }
+
+    .about-footer a:hover {
+      color: rgba(139, 92, 246, 1);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .book-page {
+        padding: 2.5rem 1.5rem 3rem;
+      }
+      .book-title {
+        font-size: 1.65rem;
+      }
+      h2.book-h2 {
+        font-size: 1.25rem;
+      }
+      body {
+        font-size: 0.96rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .book-page {
+        padding: 2rem 1.1rem 2.5rem;
+      }
+      .book-title {
+        font-size: 1.45rem;
+      }
+      .about-nav {
+        padding: 0.75rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="about-nav">
+    <a href="index.html" class="about-nav-logo">
+      <img src="public/logo.png" alt="Sodatide logo" />
+      <span>Sodatide<sup>™</sup></span>
+    </a>
+    <a href="index.html" class="about-nav-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to Home
+    </a>
+  </nav>
+
+  <!-- Book Content -->
+  <main class="book-page">
+
+    <header class="book-header">
+      <img src="public/logo.png" alt="Sodatide logo" class="book-header-logo" />
+      <h1 class="book-title">About Us</h1>
+      <p class="book-subtitle">Sodatide™ — Product Information &amp; Buyer Guidance</p>
+    </header>
+
+    <!-- About Us -->
+    <h2 class="book-h2">About Us</h2>
+    <p class="book-p">
+      Welcome to Sodatide™, an independently operated product-information website created to help consumers understand the supplement before deciding whether it fits their needs.
+    </p>
+    <p class="book-p">
+      Our goal is to present clear, practical information about the formula, ingredients, potential benefits, usage directions, safety considerations, available packages, refund terms, and customer-support options. We aim to make the buying process easier to understand without presenting the supplement as a prescription treatment or guaranteed weight-loss solution.
+    </p>
+    <div class="book-callout">
+      <p>This website is not the manufacturer's corporate website. It is an independent promotional brand page that may direct visitors to a third-party checkout to complete their purchase.</p>
+    </div>
+
+    <!-- Our Mission -->
+    <h2 class="book-h2">Our Mission</h2>
+    <p class="book-p">
+      Our mission is to help prospective buyers make informed decisions through accessible, product-specific information.
+    </p>
+    <p class="book-p">
+      Supplement pages can sometimes rely on broad promises while leaving important questions unanswered. We take a more balanced approach by explaining what the formula is intended to support, what it cannot reasonably replace, and what customers should check before ordering.
+    </p>
+    <p class="book-p">We focus on the details that matter most before purchase:</p>
+    <ul class="book-ul">
+      <li>What the supplement contains</li>
+      <li>How the synbiotic formula is designed to work</li>
+      <li>How and when the capsules should be taken</li>
+      <li>Who may find the product suitable</li>
+      <li>Possible side effects and safety precautions</li>
+      <li>Package prices and shipping terms</li>
+      <li>The conditions of the 60-day return policy</li>
+      <li>How to contact customer support</li>
+    </ul>
+
+    <!-- Who We Are -->
+    <h2 class="book-h2">Who We Are</h2>
+    <p class="book-p">
+      Sodatide™ is a product-focused information platform for adults researching digestive and weight-management support.
+    </p>
+    <p class="book-p">
+      The product is presented as a once-daily vegetarian capsule containing prebiotic and probiotic components. Each bottle provides a 30-day supply, and the available product information describes the formula as lactose-free and made without artificial stimulants.
+    </p>
+    <p class="book-p">
+      We are not a medical practice, healthcare provider, or substitute for professional advice. We do not diagnose conditions, prescribe treatments, or promise individual results. Our role is to organize the available product information in a clear format so buyers can evaluate it more confidently.
+    </p>
+
+    <!-- What We Do -->
+    <h2 class="book-h2">What We Do</h2>
+
+    <h3 class="book-h3">Product Education</h3>
+    <p class="book-p">
+      We explain the formula in straightforward language, including the relationship between prebiotic fibers, probiotic cultures, digestive balance, and everyday metabolic wellness.
+    </p>
+
+    <h3 class="book-h3">Ingredient Information</h3>
+    <p class="book-p">
+      We present the publicly available ingredient details and label amounts without adding unsupported medical claims. Visitors should always compare online information with the physical label they receive.
+    </p>
+
+    <h3 class="book-h3">Buyer Guidance</h3>
+    <p class="book-p">
+      We help shoppers understand package sizes, shipping terms, checkout considerations, return requirements, and customer-support procedures before placing an order.
+    </p>
+
+    <h3 class="book-h3">Safety Awareness</h3>
+    <p class="book-p">
+      We highlight possible digestive adjustment effects, medication considerations, allergy concerns, age restrictions, and circumstances in which professional guidance may be appropriate.
+    </p>
+
+    <h3 class="book-h3">Information Updates</h3>
+    <p class="book-p">
+      Supplement labels, package availability, prices, shipping terms, and policies may change. We review published information when updates become available and encourage visitors to verify important details during checkout.
+    </p>
+
+    <!-- Our Editorial Approach -->
+    <h2 class="book-h2">Our Editorial Approach</h2>
+    <p class="book-p">
+      We aim to keep our content useful, readable, and responsible. Our process includes:
+    </p>
+
+    <h3 class="book-h3">Reviewing available product information</h3>
+    <p class="book-p">
+      We examine published labels, usage directions, package details, guarantees, and support information.
+    </p>
+
+    <h3 class="book-h3">Separating support claims from medical claims</h3>
+    <p class="book-p">
+      Dietary supplements may support normal functions, but they should not be described as treatments for disease or guaranteed solutions.
+    </p>
+
+    <h3 class="book-h3">Providing practical buying context</h3>
+    <p class="book-p">
+      We explain costs, supply length, shipping, return conditions, and other factors that can influence a purchase.
+    </p>
+
+    <h3 class="book-h3">Including reasonable limitations</h3>
+    <p class="book-p">
+      Results can vary based on diet, activity, sleep, health status, medication use, and consistency.
+    </p>
+
+    <h3 class="book-h3">Correcting material errors</h3>
+    <p class="book-p">
+      If you identify information that appears outdated or inaccurate, contact us with the relevant page and supporting details.
+    </p>
+
+    <!-- Our Commitment to Transparency -->
+    <h2 class="book-h2">Our Commitment to Transparency</h2>
+    <p class="book-p">
+      We want visitors to understand the nature of this website before following a purchase link.
+    </p>
+    <ul class="book-ul">
+      <li>We are an independent promotional information page.</li>
+      <li>We are not the supplement manufacturer's corporate website.</li>
+      <li>We do not claim that the product diagnoses, treats, cures, or prevents disease.</li>
+      <li>We do not guarantee weight loss or identical results for every user.</li>
+      <li>We encourage customers to review the physical label and final checkout screen.</li>
+      <li>We identify relevant safety precautions and return conditions.</li>
+      <li>We may receive compensation when qualifying purchases are completed through links on this website.</li>
+    </ul>
+    <p class="book-p">
+      The information page itself also distinguishes the site from the manufacturer's official corporate website.
+    </p>
+
+    <hr class="book-divider" />
+
+    <!-- Affiliate Disclosure -->
+    <h2 class="book-h2">Affiliate Disclosure</h2>
+    <p class="book-p">
+      This is a commercial website. Some links may be affiliate links, which means the site operator may receive a commission if a visitor completes a qualifying purchase through one of those links.
+    </p>
+    <p class="book-p">
+      This potential compensation does not increase the price stated at checkout. However, visitors should independently assess the formula, package, shipping charges, return terms, and suitability before ordering.
+    </p>
+
+    <!-- Medical Disclaimer -->
+    <h2 class="book-h2">Medical Disclaimer</h2>
+    <p class="book-p">
+      The content on this website is provided for general informational and promotional purposes only. It is not medical advice and should not replace guidance from a qualified healthcare professional.
+    </p>
+    <p class="book-p">Consult a medical professional before using a dietary supplement if you:</p>
+    <ul class="book-ul">
+      <li>Are pregnant or nursing</li>
+      <li>Are under 18</li>
+      <li>Take prescription medication</li>
+      <li>Have a digestive or immune-related condition</li>
+      <li>Have known ingredient allergies</li>
+      <li>Follow a medically restricted diet</li>
+      <li>Are preparing for surgery or receiving ongoing treatment</li>
+    </ul>
+    <p class="book-p">
+      If you experience a serious or persistent reaction, discontinue use and seek appropriate medical assistance.
+    </p>
+
+    <!-- Our Responsibility to Visitors -->
+    <h2 class="book-h2">Our Responsibility to Visitors</h2>
+    <p class="book-p">
+      We believe buying confidence comes from clear expectations—not exaggerated promises.
+    </p>
+    <p class="book-p">
+      A dietary supplement should be considered one part of a broader routine that may include balanced nutrition, adequate hydration, physical activity, sufficient sleep, and professional care when necessary. No capsule can replace these foundations.
+    </p>
+    <p class="book-p">Before completing an order, visitors should confirm:</p>
+    <ul class="book-ul">
+      <li>The correct number of bottles</li>
+      <li>The final purchase total</li>
+      <li>Applicable shipping charges</li>
+      <li>Any optional checkout additions</li>
+      <li>Current return conditions</li>
+      <li>Customer-support contact information</li>
+    </ul>
+
+    <hr class="book-divider" />
+
+    <!-- Contact Us -->
+    <h2 class="book-h2">Contact Us</h2>
+    <p class="book-p">
+      For questions about an existing order, delivery, return instructions, or refund assistance, contact the published customer-support team.
+    </p>
+
+    <div class="book-contact-box">
+      <p><strong>Company / Brand Name:</strong> Sodatide™</p>
+      <p><strong>Website:</strong> <a href="https://www.sodatideofficial.us" target="_blank" rel="noopener">https://www.sodatideofficial.us</a></p>
+      <p><strong>Email:</strong> <a href="mailto:contact@customercs.com">contact@customercs.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+15074488190">+1 (507) 448-8190</a></p>
+      <p><strong>Address:</strong> Gedimino pr. 20, LT-01103, Vilnius</p>
+    </div>
+
+    <p class="book-p">
+      When contacting support about an order, include your full name, purchase email, order number, and a brief description of the issue. Do not include complete card details or other sensitive financial information in an email.
+    </p>
+    <p class="book-p">
+      For general website questions or corrections, please use our <a href="index.html#contact" class="book-link">Contact Us page</a>.
+    </p>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="about-footer">
+    <p>&copy; 2025 Sodatide™ &mdash; All Rights Reserved. &nbsp;|&nbsp; <a href="index.html">Return to Home</a></p>
+  </footer>
+
+</body>
+</html>
